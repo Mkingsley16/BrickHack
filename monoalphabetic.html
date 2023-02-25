@@ -48,34 +48,32 @@
     "z": "m"
   };
   function encrypt() {
-  let encryptedMessage = '';
+  var result = "";
   var message = document.getElementById("message").value;
   for (let i = 0; i < message.length; i++) {
-    // convert each letter to its corresponding cipher
-    encryptedMessage += cipherMap[message[i].toLowerCase()] || message[i];
+    const plainChar = message[i].toLowerCase();
+    const cipherChar = substitutionKey[plainChar] || plainChar;
+    result += (message[i] === plainChar.toUpperCase()) ? cipherChar.toUpperCase() : cipherChar
   }
-  document.getElementById("result").value = encryptedMessage;
+  document.getElementById("result").value = result;
 }
-
+ 
 // decryption function
 function decrypt() {
-  let decryptedMessage = '';
+  var result = '';
   var message = document.getElementById("message").value;
 
   for (let i = 0; i < message.length; i++) {
     // find the letter that corresponds to the cipher
-    for (let letter in cipherMap) {
-      if (cipherMap[letter] === message[i].toLowerCase()) {
-        decryptedMessage += letter;
+    for (let letter in substitutionKey) {
+      if (substitutionKey[letter] === message[i].toLowerCase()) {
+        result += letter;
         break;
       }
     }
-    // if the character is not in the cipher, just add it as is
-    if (decryptedMessage.length <= i) {
-      decryptedMessage += message[i];
-    }
-  }
-  document.getElementById("result").value = decryptedMessage;
+}
+document.getElementById("result").value = result;
+
 }
 </script>
   </body>
