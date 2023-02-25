@@ -52,3 +52,12 @@ know exactly where the data came from and that it has come intact from the sende
 
 
 
+Page 2: Methods Used:
+
+Ceaser Cipher: Ceaser Chipher is a simple type of encryption that uses substitution to shift the
+letters in a sentence to something else. Before the encryption begins a shift value is implemented to
+alter the sentence. This shift value works as the key. From there the sentence is broken up letter by letter and
+shifted down the alphabet the amount of times as the shift value. A shift value of 2 would make the letter A turn into C 
+and a value of 3 would make the letter C turn into F. If the shift passes the letter Z the process just begins
+again from letter A.
+
