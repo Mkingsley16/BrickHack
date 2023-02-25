@@ -42,4 +42,13 @@ Cons: Due to the extra steps of using 2 keys the encryption process is over a mi
 than Symmetric encryption. 
 
 
+Why do we use Cryptography to encrypt data?
+
+One benifit to using Cryptography is that is allows your data to remain confidential. Through encryption
+only authorized people are allowed to access the data.
+
+Another benifit is Data integrity and Authentication are protected. Digital Signatures help allow us to
+know exactly where the data came from and that it has come intact from the sender with no thrid party changes.
+
+
 
