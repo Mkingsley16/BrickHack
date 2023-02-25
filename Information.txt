@@ -2,14 +2,25 @@ Main Page:
 
 What is Encryption and Decryption:
 
-
+Cryptography is the process of securing information that will be sent from one individual to another
+only allowing the people intened to see the message to understand it. Cryptography works with designing
+and solving codes to better protect and secure the trasfer of data.
 
 
 Encryption is a process of converting plaintext(readable text) into another form of unintelligible writing that is unreadable. 
+
 Decryption is the reverse process of encryption where unintelligible writing is converted back into readable text through the use of a key.
 
 
 
 Page 1: How encryption works 
 
-There are two main methods that are used to encrypt and decrypt data. The first is 
+There are two main methods that are used to encrypt and decrypt data. 
+
+Symmetric Cryptography:  In Symmetric Cryptography there is a single key used to both encrypt and 
+decrypt the data being transfered. When the sender encrypts their data is is locked with a key 
+to keep the data unreadable and out of the hands of the general public. The key is then transfered to the
+message is intened for and they use this key to unlock the data and decrypt it making it readable again.
+
+Assymetric Cryptography: 
+jdasha 
