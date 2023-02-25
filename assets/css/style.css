@@ -25,15 +25,26 @@ nav a{
     text-decoration: none;
     color:aliceblue;
     font-variant: small-caps;
+    flex: 1;
+    background-color: #333;
+    border: 1px solid;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
 }
 nav {
-    align-items: center;
-    text-align: center;
-    background-color: rgb(1, 119, 158);
-    margin-bottom:20px;
-    padding:20px;
-    border: solid 2px black;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+
+  
+a:hover,a:focus {
+    background-color: aliceblue;
+    color: #333;
 }
+
 
 #blocks{
     margin:5% 0;
