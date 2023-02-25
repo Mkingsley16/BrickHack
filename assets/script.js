@@ -5,16 +5,18 @@ function handleSubmit(event) {
     const input = document.getElementById('input').value;
   
     // run the algorithm
-    const output = myAlgorithm(input);
+    const output = encryptWithAES(input);
   
     // display the output
     const outputElement = document.getElementById('output');
     outputElement.innerText = output;
   }
   
-  function myAlgorithm(input) {
+  function encryptWithAES(input) {
+    // const CryptoJS = require('crypto-js');
     // add your algorithm code here
-    return btoa(input);
+    const pass = '123';
+    return CryptoJS.AES.encrypt(input, pass);
   }
   
   // add an event listener to the form
