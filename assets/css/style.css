@@ -1,0 +1,39 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+article {
+    text-align: center !important;
+    color:aliceblue;
+    background-color: rgb(1, 119, 158);
+    border:solid 2px black;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 23px;
+}
+
+nav a{
+    font-size: 25px;
+    padding: 0 30px;
+    text-decoration: none;
+    color:aliceblue;
+    font-variant: small-caps;
+}
+nav {
+    align-items: center;
+    text-align: center;
+    background-color: rgb(1, 119, 158);
+    margin-bottom:20px;
+    padding:20px;
+    border: solid 2px black;
+}
+
+#blocks{
+    
+}
+#encrypt{
+    float:left;
+}
+#decrypt{
+    float:right;
+}
