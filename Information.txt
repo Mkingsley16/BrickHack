@@ -1,0 +1,15 @@
+Main Page:
+
+What is Encryption and Decryption:
+
+
+
+
+Encryption is a process of converting plaintext(readable text) into another form of unintelligible writing that is unreadable. 
+Decryption is the reverse process of encryption where unintelligible writing is converted back into readable text through the use of a key.
+
+
+
+Page 1: How encryption works 
+
+There are two main methods that are used to encrypt and decrypt data. The first is 
