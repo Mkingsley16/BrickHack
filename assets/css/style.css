@@ -66,3 +66,15 @@ html {
     -o-background-size: cover;
     background-size: cover;
   }
+
+
+  textarea,input{
+    border-color: black ;
+    border-width: 2px;
+    background-color:darkgrey;
+  }
+
+  #encryption{
+    width:40%;
+    margin:0 30%;
+  }
