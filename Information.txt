@@ -22,10 +22,24 @@ decrypt the data being transfered. When the sender encrypts their data is is loc
 to keep the data unreadable and out of the hands of the general public. The key is then transfered to the
 message is intened for and they use this key to unlock the data and decrypt it making it readable again.
 
+Pros: Symmetric Cryptography is fast and efficient taking little to no time to encrypt and decrypt
+
+Cons: Having only one key is a secuirty risk. If the key is lost or stolen, an outside source now has access
+to your messages even if they are encrypted. 
+
+
 Asymetric Cryptography: Asymetric Cryptography is also known as public key encryption. Within Asymetric
 Cryptography two keys are used. The first key is a public key that the general public has access to.
 Everyone can see this key and when you want to send a message to another person, you take their public key
 and encyrpt your message with it. The second key is the private key. This key is never shared and held onto
 by only the sender. When they recive a message encrypt by their public key found onoine, they use their
 private key to decrypt the message and see the original content sent by the original source.
+
+Pros: Asymetric Cryptography is much more secure. There is no need to transer keys so it keeps your
+data secure so that only the people who are intened to recive the information actually get it.
+
+Cons: Due to the extra steps of using 2 keys the encryption process is over a million times slower
+than Symmetric encryption. 
+
+
 
