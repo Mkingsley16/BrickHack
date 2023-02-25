@@ -15,8 +15,9 @@ li{
 }
 #benefits{
     float:center;
-    width: 30%;
-    margin: 0 35%;
+    width: 40%;
+    margin: 0 30%;
+    padding:0 !important;
 }
 article {
     text-align: center;
