@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <body>
+
+  <label for="message">Enter your message:</label><br>
+  <textarea id="message" rows="5" cols="50"></textarea>
+</p>
+
+<p>
+  <button onclick="encrypt()">Encrypt</button>
+  <button onclick="decrypt()">Decrypt</button>
+</p>
+
+<p>
+  <label for="result">Result:</label><br>
+  <textarea id="result" rows="5" cols="50" readonly></textarea>
+</p>
+</head>
+<body>
+  <script>
+    const substitutionKey = {
+    "a": "q",
+    "b": "w",
+    "c": "e",
+    "d": "r",
+    "e": "t",
+    "f": "y",
+    "g": "u",
+    "h": "i",
+    "i": "o",
+    "j": "p",
+    "k": "a",
+    "l": "s",
+    "m": "d",
+    "n": "f",
+    "o": "g",
+    "p": "h",
+    "q": "j",
+    "r": "k",
+    "s": "l",
+    "t": "z",
+    "u": "x",
+    "v": "c",
+    "w": "v",
+    "x": "b",
+    "y": "n",
+    "z": "m"
+  };
+  function encrypt() {
+  let encryptedMessage = '';
+  var message = document.getElementById("message").value;
+  for (let i = 0; i < message.length; i++) {
+    // convert each letter to its corresponding cipher
+    encryptedMessage += cipherMap[message[i].toLowerCase()] || message[i];
+  }
+  document.getElementById("result").value = encryptedMessage;
+}
+
+// decryption function
+function decrypt() {
+  let decryptedMessage = '';
+  var message = document.getElementById("message").value;
+
+  for (let i = 0; i < message.length; i++) {
+    // find the letter that corresponds to the cipher
+    for (let letter in cipherMap) {
+      if (cipherMap[letter] === message[i].toLowerCase()) {
+        decryptedMessage += letter;
+        break;
+      }
+    }
+    // if the character is not in the cipher, just add it as is
+    if (decryptedMessage.length <= i) {
+      decryptedMessage += message[i];
+    }
+  }
+  document.getElementById("result").value = decryptedMessage;
+}
+</script>
+  </body>
+</html>
