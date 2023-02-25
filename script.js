@@ -14,7 +14,7 @@ function handleSubmit(event) {
   
   function myAlgorithm(input) {
     // add your algorithm code here
-    return input.toUpperCase();
+    return btoa(input);
   }
   
   // add an event listener to the form
