@@ -1,0 +1,155 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+iframe {
+    border-radius: 20px;
+}
+#solar {
+    font-size: 40px;
+    text-transform: capitalize;
+    color:black;
+    font-weight: bold;
+}
+
+nav a{
+    font-size: 25px;
+    padding: 0 30px;
+    text-decoration: none;
+    color:aliceblue;
+    font-variant: small-caps;
+}
+
+h3 {
+    text-align: center;
+    font-size: 32px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+
+
+@media screen and (min-width: 800px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    iframe {
+        max-width: 40vw;
+        max-height: 50vw;
+        margin: 0 5vw;
+    }
+
+    #history{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+
+    p {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    nav {
+        align-items: center;
+        text-align: center;
+        background-color: rgb(1, 119, 158);
+        margin-bottom:20px;
+        padding:20px;
+        border: solid 2px black;
+    }
+
+
+    ul{
+        color:aliceblue;
+        background-color: rgb(1, 119, 158);
+        border:solid 2px black;
+        border-radius: 20px;
+        padding: 40px;
+        font-size: 30px;
+    }
+    li {
+        padding:20px 0px;
+        text-align: center;
+    }
+    #pros{
+
+        float:left;
+
+    }
+    #cons{
+        float:right;
+    }
+
+}
+
+@media screen and (max-width:1500px) and (min-width:800px){
+    ul{
+        margin: 20px 10vw !important;
+        color:aliceblue;
+        background-color: rgb(1, 119, 158);
+        border:solid 2px black;
+        border-radius: 20px;
+        padding: 40px;
+        font-size: 32px;
+    }
+    #list{
+        font-size: 32px;
+        padding:20px 0;
+    }
+    #pros{
+        float:none !important;
+
+
+    }
+    #cons{
+        float: none !important;
+    }
+
+}
+@media screen and (max-width: 800px) {
+
+
+    iframe {
+        padding-top: 150px;
+        max-width: 100%;
+    }
+
+    #history{
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    nav {
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        background-color: rgb(1, 119, 158);
+        margin-bottom:20px;
+        padding:20px;
+        border: solid 2px black;
+    }
+
+
+    ul{
+        margin: 20px 10vw;
+        color:aliceblue;
+        background-color: rgb(1, 119, 158);
+        border:solid 2px black;
+        border-radius: 20px;
+        padding: 40px;
+        font-size: 32px;
+    }
+    li {
+        padding:15px 0;
+        text-align: center;
+    }
+}
