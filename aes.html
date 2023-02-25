@@ -18,7 +18,7 @@
          document.getElementById("decrypted").innerHTML = "";
       }
 
-function decrypt() {
+      function decrypt() {
          var decrypted = CryptoJS.AES.decrypt(
             document.getElementById("EncryptedValue").innerHTML,
             document.getElementById("password").value
