@@ -31,9 +31,72 @@
  <hr>
  <br>
  <article id="encryption">
-<!--
-    Add the encryption javascript and buttons here
--->
+    <p>
+        <label for="message">Enter your message:</label><br>
+        <textarea id="message" rows="5" cols="50"></textarea>
+      </p>
+    
+      <p>
+        <label for="keys">publicKey ,publicKey ,privateKey ,privateKey:</label><br>
+        <textarea id="keys" rows="1" cols="50" readonly></textarea>
+      </p>
+    
+      <p>
+        <button onclick="encrypt()">Encrypt</button>
+        <button onclick="decrypt()">Decrypt</button>
+      </p>
+    
+      <p>
+        <label for="result">Result:</label><br>
+        <textarea id="result" rows="5" cols="50" readonly></textarea>
+      </p>
+      <script>
+        const [publicKey,privateKey] = generateRSAKeys();
+        document.getElementById("keys").value = [publicKey,privateKey];
+        
+        function encrypt() {
+        // Generate ciphertext using the RSA algorithm    
+        const plaintext =  document.getElementById("message").value;
+        const [n, e] = publicKey;
+        const ciphertext = BigInt(plaintext) ** BigInt(e) % BigInt(n);
+        document.getElementById("result").value = ciphertext;         
+    }
+
+        function decrypt() {
+        // Decrypt ciphertext using the RSA algorithm
+        const ciphertext =  document.getElementById("message").value;
+        const [n, d] = privateKey;      
+        const plaintext = BigInt(ciphertext) ** BigInt(366) % BigInt(n );
+        document.getElementById("result").value = plaintext;  
+    }
+        
+        function generateRSAKeys() {
+        const p = BigInt(61); 
+        const q = BigInt(53);
+        const n = p * q;
+        const phi = (p - 1n) * (q - 1n);
+        const e = 17n; // replace with your own value for e (must be coprime to phi)
+        const d = modInv(e, phi);
+        return [[n, e], [n, d]];
+        }
+
+        function modInv(a, m) {
+        // Calculates the modular inverse of a mod m using the extended Euclidean algorithm
+        let [x, y, u, v] = [0n, 1n, 1n, 0n];
+        while (a !== 0n) {
+            const q = m / a;
+            const r = m % a;
+            const m1 = x - u * q;
+            const m2 = y - v * q;
+            [m, a] = [a, r];
+            [x, y] = [u, v];
+            [u, v] = [m1, m2];
+        }
+        const gcd = m;
+        const inv = x < 0n ? x + m : x;
+        return inv;
+        }
+            </script>
    </article>
 </body>
 </html>
