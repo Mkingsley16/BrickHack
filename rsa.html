@@ -18,20 +18,21 @@
   
       </nav>
       <h1>
-          RSA Cipher
+          RSA Number Cipher
       </h1>
   </header>
   <nav>
   <a href="ceasar.html">Ceasar Cipher</a>
   <a href ="aes.html">AES Cipher</a>
   <a href="monoalphabetic.html">Monoalphabetic Cipher</a>
-  <a href="rsa.html">RSA Cipher</a>
+  <a href="rsa.html">RSA Number Cipher</a>
   </nav>
  <br>
  <hr>
  <br>
  <article id="encryption">
     <p>
+        <label for="numbers">This RSA Cipher only works with numbers</label><br>
         <label for="message">Enter your message:</label><br>
         <textarea id="message" rows="5" cols="50"></textarea>
       </p>
@@ -65,14 +66,14 @@
         function decrypt() {
         // Decrypt ciphertext using the RSA algorithm
         const ciphertext =  document.getElementById("message").value;
-        const [n, d] = privateKey;      
-        const plaintext = BigInt(ciphertext) ** BigInt(366) % BigInt(n );
+        const [n, d] = privateKey;
+        const plaintext = BigInt(ciphertext) ** BigInt(1926) % BigInt(n);
         document.getElementById("result").value = plaintext;  
     }
         
         function generateRSAKeys() {
-        const p = BigInt(61); 
-        const q = BigInt(53);
+        const p = BigInt(79); 
+        const q = BigInt(61);
         const n = p * q;
         const phi = (p - 1n) * (q - 1n);
         const e = 17n; // replace with your own value for e (must be coprime to phi)
